@@ -1,0 +1,134 @@
+body{
+    background-color: #03042c;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* height: 150px;
+    width: 300px; */
+    /* background-color: green;
+    transform: translate(-50%,-50%); */
+    /* border: 1px solid white; */
+    color: white;
+    /* background-color: red; */
+    font-size: 50px;
+    padding: 30px 50px;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 25px 50px rgba(0,0,0,0.5);
+    overflow: hidden;
+    transition: all 1s ease;
+
+
+    /* below only one will work and that too last one which is declared at last so use above property i.e all */
+    /* transition: background 1s ease; */
+    /* transition: color 1s ease; */
+}
+
+/* .center:before{ */
+    /* content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 50%; */
+    /* height: 200px; */
+    /* background-color: green; */
+    /* background-color: rgba(255,255,255,0.05); */
+/* } */
+
+/* Targeting spans */
+.center span:nth-child(1){
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background:linear-gradient(to right,#0c002b,#1799ff);
+    animation: anime_1 2s linear infinite;
+}
+@keyframes anime_1{
+    0%{
+        transform: translate(-100%);
+    }
+    100%{
+        transform: translate(100%);
+    }
+}
+
+
+
+.center span:nth-child(2){
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 2px;
+    height: 100%;
+    background:linear-gradient(to bottom,#0c002b,#1799ff);
+    animation: anime_2 2s linear infinite;
+    /* To synchronize */
+    animation-delay: 1s;
+}
+@keyframes anime_2{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+
+
+.center span:nth-child(3){
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background:linear-gradient(to left,#0c002b,#1799ff);
+    animation: anime_3 2s linear infinite;
+}
+@keyframes anime_3{
+    0%{
+        transform: translate(100%);
+    }
+    100%{
+        transform: translate(-100%);
+    }
+}
+
+
+
+.center span:nth-child(4){
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 2px;
+    height: 100%;
+    background:linear-gradient(to top,#0c002b,#1799ff);
+    animation: anime_4 2s linear infinite;
+    /* To synchronize */
+    animation-delay: 1s;
+}
+@keyframes anime_4{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+
+/* Hover Effect */
+.center:hover{
+    background: #EEEB18;
+    color: black;
+    box-shadow: 0px 25px 50px #EEEB18;
+}
+/* removing | hiding sliding light effect  */
+.center:hover span{
+    background: #EEEB18;
+    visibility: hidden;
+}
+
